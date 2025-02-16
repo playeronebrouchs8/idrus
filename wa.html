@@ -3,29 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubungi Kami di WhatsApp</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+    <title>Konfirmasi WhatsApp</title>
+    <script>
+        function startQuestions() {
+            let answer1 = confirm("Apakah Anda ingin Sama Saya?");
+            if (answer1) {
+                let answer2 = confirm("Anda yakin ingin Sama Saya?");
+                if (answer2) {
+                    window.location.href = "https://wa.me/qr/L74JUWC2EHQGN1";
+                } else {
+                    alert("Ya/Mau.");
+                }
+            } else {
+                alert("Tidak.");
+            }
         }
-        .whatsapp-btn {
-            background-color: #25D366;
-            color: white;
-            font-size: 20px;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .whatsapp-btn:hover {
-            background-color: #128C7E;
-        }
-    </style>
+    </script>
 </head>
-<body>
-    <h1>Hubungi Kami di WhatsApp</h1>
-    <p>Klik tombol di bawah untuk mengirim pesan ke WhatsApp kami:</p>
-    <a href="https://wa.me/6285975097618" class="whatsapp-btn" target="_blank">Chat di WhatsApp</a>
+<body onload="startQuestions()">
+    <h1>Mohon tunggu...</h1>
 </body>
 </html>
